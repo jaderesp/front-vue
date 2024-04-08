@@ -1,0 +1,17 @@
+INSTRUÇÕES SOBRE O NLP NODEJS
+
+
+UTERANCES:  
+  FRASES/PALAVRAS chaves de gatilho para disparo de mensagens.
+  ex.:    
+
+    {
+
+        uterances:{
+            "Conte-me um fato Chuck Norris",
+            "Conte-me uma piada sobre Chuck Norris",
+            "dizer uma piada do Chuck Norris",
+            "algum fato de Chuck Norris"
+        }
+
+    }

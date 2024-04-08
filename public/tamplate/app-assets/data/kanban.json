@@ -1,0 +1,22 @@
+[
+  {
+    "id": "PENDENTE",
+    "title": "Aguardando",
+    "item": []
+  },
+  {
+    "id": "ABERTO",
+    "title": "Em Atendimento",
+    "item": []
+  },
+  {
+    "id": "FECHADO",
+    "title": "Concluído",
+    "item": []
+  },
+  {
+    "id": "AUTOBOT",
+    "title": "Bot",
+    "item": []
+  }
+]

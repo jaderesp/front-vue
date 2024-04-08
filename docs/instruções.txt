@@ -1,0 +1,5 @@
+instalação do projeto
+
+
+#migrates
+    excutar: npx sequelize-cli db:migrate

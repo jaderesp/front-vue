@@ -1,0 +1,4 @@
+caso utilize vps no estrangeiro,
+necessáro ajusta data e hora e timezone:
+
+link: https://phoenixnap.com/kb/how-to-set-or-change-timezone-date-time-ubuntu

@@ -1,0 +1,102 @@
+<!-- BEGIN: Content-->
+<div class="app-content content ">
+    <div>
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                <!-- users list start -->
+                <section class="app-user-list">
+                    <!-- users filter start -->
+                    <div class="card">
+                        <h5 class="card-header">Opções</h5>
+                        <div class="d-flex justify-content-between align-items-center mx-50 row pt-0 pb-2">
+                            <div class="col-md-4 user_role">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="">Filtrar Usuários:</label>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <input type="text" class="custom-input">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 user_status"></div>
+                        </div>
+                    </div>
+                    <!-- users filter end -->
+                    <!-- list section start -->
+                    <div class="card">
+                        <h5 class="card-header">Usuários Cadastrados</h5>
+                        <div class="card-datatable table-responsive pt-0">
+                            <div class="content">
+                                <div class="d-flex align-items-center justify-content-end">
+                                    <button type="button" class="btn btn-sm btn-default">
+                                        <span class="text-nowrap">Novo Usuario</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>id</th>
+                                        <th>nome</th>
+                                        <th>Tipo</th>
+                                        <th>Email</th>
+                                        <th>Telefone</th>
+                                        <th>Ult. Atualiz.</th>
+                                        <th>Criada</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Modal to add new user starts-->
+                        <div class="modal modal-slide-in new-user-modal fade" id="setupUsuario_modal">
+                            <div class="modal-dialog">
+                                <form class=" modal-content pt-0">
+                                    <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close">×</button>
+                                    <div class="modal-header mb-1">
+                                        <h5 class="modal-title" id="exampleModalLabel">Dados do Usuário: </h5>
+                                    </div>
+                                    <div class="modal-body flex-grow-1">
+
+
+
+                                        <button type="submit" class="btn btn-success mr-1">Salvar</button>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Modal to add new user Ends-->
+                    </div>
+                    <!-- list section end -->
+                </section>
+                <!-- users list ends -->
+
+            </div>
+        </div>
+        <!-- modals -->
+        <!-- <%- include('includes/modal/import_modal'); -%> -->
+        <!-- fim modals -->
+    </div>
+</div>
+<!-- END: Content-->

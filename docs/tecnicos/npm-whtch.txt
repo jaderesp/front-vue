@@ -1,0 +1,27 @@
+JUSTES DE PROBLEMAS COM NPM:
+
+Problema
+Ao iniciar um watcher, recebemos o erro:
+
+    Error: ENOSPC: System limit for number of file watchers reached 
+
+Solução
+Aumentar o limite de user watches no sistema operacional.
+
+Verificar o limite atual:
+
+cat /proc/sys/fs/inotify/max_user_watches
+8192
+
+Ajustar o novo limite no arquivo /etc/sysctl.conf:
+
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
+O comando acima acrescentou a linha "fs.inotify.max_user_watches=524288" ao arquivo /etc/sysctl.conf e em seguida pediu ao kernel para recarregar as novas configurações.
+
+Verificar o novo limite:
+
+cat /proc/sys/fs/inotify/max_user_watches
+524288
+
+Problema resolvido! 

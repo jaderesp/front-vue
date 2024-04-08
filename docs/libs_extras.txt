@@ -1,0 +1,3 @@
+design de modulos relacionais (visual): https://github.com/edupoli/Drawflow
+
+drawFlow: exemplo pratico:  https://jsfiddle.net/wd7r81yz/1/

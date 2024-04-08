@@ -1,0 +1,32 @@
+var ack = {
+        "id": {
+        "fromMe": true,
+        "remote": "5516994503846@c.us",
+        "id": "3EB07A32026D8129594C",
+        "_serialized": "true_5516994503846@c.us_3EB07A32026D8129594C"
+        },
+        "body": "teste",
+        "type": "chat",
+        "subtype": null,
+        "t": 1656100399,
+        "from": "5516997141457@c.us",
+        "to": "5516994503846@c.us",
+        "self": "out",
+        "ack": 1,
+        "isNewMsg": true,
+        "star": false,
+        "isFromTemplate": false,
+        "mentionedJidList": [],
+        "urlText": null,
+        "urlNumber": null,
+        "isVcardOverMmsDocument": false,
+        "isForwarded": false,
+        "labels": [],
+        "hasReaction": false,
+        "productHeaderImageRejected": false,
+        "lastPlaybackProgress": 0,
+        "isDynamicReplyButtonsMsg": false,
+        "isMdHistoryMsg": false,
+        "requiresDirectConnection": false,
+        "pttForwardedFeaturesEnabled": true
+    }

@@ -1,0 +1,33 @@
+var ack = {
+    id: {
+      fromMe: true,
+      remote: '5516993860387@c.us',
+      id: '3EB00981C769AE5C04FE',
+      _serialized: 'true_5516993860387@c.us_3EB00981C769AE5C04FE'
+    },
+    body: '👨‍👩‍👧‍👧teste',
+    type: 'chat',
+    subtype: null,
+    t: 1647539513,
+    from: '5516997141457@c.us',
+    to: '5516993860387@c.us',
+    self: 'out',
+    ack: 2,
+    isNewMsg: true,
+    star: false,
+    isFromTemplate: false,
+    mentionedJidList: [],
+    urlText: null,
+    urlNumber: null,
+    isVcardOverMmsDocument: false,
+    isForwarded: false,
+    labels: [],
+    hasReaction: false,
+    ephemeralStartTimestamp: 1647539514,
+    productHeaderImageRejected: false,
+    lastPlaybackProgress: 0,
+    isDynamicReplyButtonsMsg: false,
+    isMdHistoryMsg: false,
+    requiresDirectConnection: false,
+    pttForwardedFeaturesEnabled: false
+  }

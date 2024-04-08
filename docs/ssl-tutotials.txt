@@ -1,0 +1,25 @@
+INSTALAÇÃO SSL SEGUIR:
+
+https://flaviocopes.com/express-letsencrypt-ssl/
+
+
+CONFIGURAR TODAS AS PORTAS PARA HTTPS COM NGINX
+
+https://techexpert.tips/nginx/nginx-redirect-http-to-https/
+
+ou 
+
+https://www.alibabacloud.com/blog/595351
+
+ou 
+
+https://itnext.io/node-express-letsencrypt-generate-a-free-ssl-certificate-and-run-an-https-server-in-5-minutes-a730fbe528ca
+
+
+passos para instalação SSL (produção):
+
+👉 gerar certificado (pode ser zeroSsl);
+
+👉 adicionar os certificados em uma pasta
+
+👉 no arquivo server.js apontar para os arquivos do certificado.

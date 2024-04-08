@@ -1,0 +1,51 @@
+====== instalação mysql server ubuntu - e acesso externo ======
+
+- comandos de instalação:
+
+        sudo apt update
+
+        sudo apt install mysql-server
+
+        service mysql status
+
+    Agora podemos iniciar a configuração do MySQL 8, usando o comando:
+
+        mysql_secure_installation
+
+        link tutorial: https://hcode.com.br/blog/como-instalar-o-mysql-8-no-ubuntu-2004
+
+- comandos para criar usuario e dar permissão de acesso:
+mysql> CREATE USER 'username'@'%' IDENTIFIED BY 'xxxxxxxx';
+mysql> GRANT ALL PRIVILEGES ON * . * TO 'username'@'%';
+mysql> FLUSH PRIVILEGES;
+
+
+
+
+======= acesso externo ================
+
+
+
+Permitir acesso remoto a um servidor MySQL
+
+Ao instalar um servidor da base de dados MySQL, por padrão ele só será acessado por aplicações que estejam na mesma máquina que o servidor, em outras palavras, não está habilitado para acesso remoto.
+
+Neste tutorial iremos aprender a liberar o acesso remoto.
+
+Atenção: Execute estes comando no terminal do servidor.
+
+    abra um terminal e digite
+        sudo vi /etc/mysql/my.cnf
+    comente as linhas
+        binsd-addres = 127.0.0.1
+        skip-external-locking
+    reinicie o servidor com o comando
+        /etc/init.d/mysql restart
+        sudo service mysql restart
+    entre no prompt do mysql com o comando:
+        mysql –u root –p
+    Será solicitado a senha do usuário root para servidor MySQL
+    no prompt do MySQL digite:
+        GRANT ALL ON *.* TO root@’%’ IDENTIFIED By ‘senhadoroot’;
+        FLUSH PRIVILEGES;
+    O comando acima irá permitir acesso a todos os bancos de dados de qualquer máquina remota ao usuário root.

@@ -1,0 +1,136 @@
+<!-- BEGIN: Content-->
+<div class="app-content content " id="app-jms">
+    <div>
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row">
+                <h1>{{ message }}</h1>
+            </div>
+            <div class="content-body">
+                <!-- users list start -->
+                <section class="app-user-list">
+                    <!-- users filter start -->
+                    <div class="card">
+                        <h5 class="card-header">Opções</h5>
+                        <div class="d-flex justify-content-between align-items-center mx-50 row pt-0 pb-2">
+                            <div class="col-md-4 user_role">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="">Filtrar Usuários:</label>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <input ng-model="filerUsuario.nome" type="text" class="custom-input">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 user_status"></div>
+                        </div>
+                    </div>
+                    <!-- users filter end -->
+                    <!-- list section start -->
+                    <div class="card">
+                        <h5 class="card-header">Usuários Cadastrados</h5>
+                        <div class="card-datatable table-responsive pt-0">
+                            <div class="content">
+                                <div class="d-flex align-items-center justify-content-end">
+                                    <button type="button" class="btn btn-sm btn-default">
+                                        <span class="text-nowrap">Novo Usuario</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <table class="table" datatable="ng" dt-options="dtOptions">
+                                <thead>
+                                    <tr>
+                                        <th>id</th>
+                                        <th>nome</th>
+                                        <th>Tipo</th>
+                                        <th>Email</th>
+                                        <th>Telefone</th>
+                                        <th>Ult. Atualiz.</th>
+                                        <th>Criada</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="item in usuarios_list | filter:filerUsuario  ">
+                                        <td ng-bind="item.idusuario"></td>
+                                        <td ng-bind="item.nome"></td>
+                                        <td>
+                                            <div ng-if="item.type_user == 'owner'"
+                                                title="Dono e Gestor da conta registrada."
+                                                class="btn btn-sm bootstrap-touchspin-down"
+                                                style="background-color:#9b43ff; color:#fff; min-width: 80px;"
+                                                ng-bind="item.type_user"></div>
+                                            <div ng-if="item.type_user == 'admin'"
+                                                title="usuário administrador do sistema."
+                                                class="btn btn-sm bootstrap-touchspin-down"
+                                                style="background-color:#14bc4f; color:#fff; min-width: 80px;"
+                                                ng-bind="item.type_user"></div>
+                                            <div ng-if="item.type_user == 'atendente'"
+                                                title="usuário operador do atendimento."
+                                                class="btn btn-sm bootstrap-touchspin-down"
+                                                style="background-color:#43aaff; color:#fff; font-size:10px;"
+                                                ng-bind="item.type_user"></div>
+                                        </td>
+                                        <td ng-bind="item.email"></td>
+                                        <td ng-bind="item.telefone"></td>
+                                        <td>
+                                            <span ng-bind="item.updatedAt | date:'dd/MM/yyyy h:mma' "></span>
+                                        </td>
+                                        <td>
+                                            <span ng-bind="item.createdAt | date "></span>
+                                        </td>
+                                        <!--ações-->
+                                        <td>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow"
+                                                    data-toggle="dropdown">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="feather feather-more-vertical">
+                                                        <circle cx="12" cy="12" r="1"></circle>
+                                                        <circle cx="12" cy="5" r="1"></circle>
+                                                        <circle cx="12" cy="19" r="1"></circle>
+                                                    </svg>
+                                                </button>
+                                                <div class="dropdown-menu">
+
+                                                    <a class="dropdown-item" href="javascript:void(0);"
+                                                        ng-mousedown="setupUsuario_modal(item)">
+                                                        <i data-feather="edit-2" class="mr-50"></i>
+                                                        <span>Editar</span>
+                                                    </a>
+
+                                                    <!-- deletar somente se a campanha estiver dentro do prazo -->
+                                                    <a ng-mousedown="confirma_exclusao_registro(item)"
+                                                        class="dropdown-item" href="javascript:void(0);">
+                                                        <i data-feather="trash" class="mr-50"></i>
+                                                        <span>Excluir</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Modal to add new user starts-->
+
+                        <!-- Modal to add new user Ends-->
+                    </div>
+                    <!-- list section end -->
+                </section>
+                <!-- users list ends -->
+
+            </div>
+        </div>
+        <!-- modals -->
+        <!-- <%- include('includes/modal/import_modal'); -%> -->
+        <!-- fim modals -->
+    </div>
+</div>
+<!-- END: Content-->

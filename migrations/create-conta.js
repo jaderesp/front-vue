@@ -1,0 +1,39 @@
+'use strict';
+
+module.exports = {
+  async up (queryInterface, Sequelize) {
+    /**
+     * Add altering commands here.
+     *
+      ler sobre migrate aqui: https://imasters.com.br/banco-de-dados/tutorial-de-migrations-com-node-js-e-sequelize
+     */
+
+     await queryInterface.createTable('Conta', {
+            id_conta: {
+                  type:Sequelize.INTEGER.ZEROFILL,
+                  autoIncrement: true,
+                  allowNull: false,
+                  primaryKey: true
+              },
+              id_owner: {
+                  type:Sequelize.INTEGER.ZEROFILL,
+                  allowNull: false
+              }, 
+              id_plano: {
+                  type:Sequelize.INTEGER.ZEROFILL,
+                  allowNull: true
+              }, 
+              token: {
+                type: Sequelize.STRING(2000),
+                allowNull: false
+              },         
+              // Timestamps
+              createdAt: Sequelize.DATE,
+              updatedAt: Sequelize.DATE,
+          })
+    },
+    down: async (queryInterface, Sequelize) => {
+      await queryInterface.dropTable('Conta');
+    }
+
+  }
